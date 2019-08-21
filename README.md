@@ -15,3 +15,4 @@ Part one of the tutorial: [Build a trello clone, part 1](https://www.youtube.com
 - [Vuex](https://vuex.vuejs.org/)
 - [Vuetify](https://vuetifyjs.com/en/)
 - [MongoDb](https://www.mongodb.com/)
+- [Mongoose](https://mongoosejs.com/)

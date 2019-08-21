@@ -3,7 +3,29 @@
   "port": 3030,
   "public": "../public/",
   "paginate": {
-    "default": 10,
-    "max": 50
-  }
+    "default": 500,
+    "max": 1000
+  },
+  "authentication": {
+    "secret": "5a1597701c30d19a3c51d0ec52913e1e9e8272ee102c19522f6f28dae3580f0f00c0a2aa0259342241a80b15840790b449fec34bd93d01b7c3cfdf5bb8897ca658e5cb4180b3356aa948d540b151c4b5c722fe66069e037e527931a349c308a32da7012579601794a64f97aee11babcb42e00f6d2d8db8a4bd46d78673d6f4be3f24397eec21c54eb4ccc701d1cf253cd0a6ac7d89e8e482c963650f30e52fced02eef6feaa32e2a2c1de5f922efe91aea2b44fffe7d56886c39f1a03dcb7063ea58dad386325900a5300fe8fdd7301ba53955c169c7d89cb5120bfa5fd92284f7c55eb779c2a481d8ef751f3442bb0e3d411970af9fc85969c9676ac8ef5bef",
+    "strategies": ["jwt", "local"],
+    "path": "/authentication",
+    "service": "users",
+    "jwt": {
+      "header": {
+        "typ": "access"
+      },
+      "audience": "https://trello-clone.com",
+      "subject": "anonymous",
+      "issuer": "trello-clone",
+      "algorithm": "HS256",
+      "expiresIn": "1d"
+    },
+    "local": {
+      "entity": "user",
+      "usernameField": "username",
+      "passwordField": "password"
+    }
+  },
+  "mongodb": "mongodb://localhost:27017/trello_clone_server"
 }
