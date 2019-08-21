@@ -1,13 +1,7 @@
 <template>
-  <HelloWorld />
+  <v-container fluid>
+    <v-layout column align-center>
+      <v-btn :to="{ name: 'signup' }">Signup</v-btn>
+    </v-layout>
+  </v-container>
 </template>
-
-<script>
-import HelloWorld from '../components/HelloWorld';
-
-export default {
-  components: {
-    HelloWorld,
-  },
-};
-</script>
